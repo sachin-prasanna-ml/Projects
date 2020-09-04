@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/designs.css">
+    <title>Sachin Animations - World of CGI</title>
+</head>
+<body>  
+    <div class="overlay" id="overlay">
+        <h3>Lookin' for it...</h3>
+    </div>
+    <div class="bg">
+        <section class="itemSearch">
+            <header>
+                <a href="info.html">sachin.animations</a>
+            </header>
+            <h1>Lets <span>animate</span> together</h1>
+            <p>We have pretty much everything you love in animations. Feel free to surf all around the site and learn all the cool stuff in an instant.</p>
+            <div class="form-container">
+                <form action="">
+                    <div>
+                        <label for="animation">Enter your area of interest:</label>
+                        <input type="text" id='animation'>
+                        <p>Say: "3D Modelling"</p>
+                    </div>
+                    <input type="button" value="Let's Rock IT" id='srch-btn'>
+                </form>
+            </div>
+        </section>
+    </div>
+    <section class="info">
+        <div class="right">
+            <h2>What's there?</h2>
+            <p>The real virtue of animation and motion graphics lies in the hands of a creative mind. The passion of creating wonders within hours just using our brains and few tools to sidekick the ideas opens up portal to a new world. Here at sachin animations we bring up ideas to your doorstep and when you feel that you need to achieve something BIG! we are ready to give you the knowledge.</p>
+        </div>
+        <img src="images/3dsmax.jpg" alt="Let's know about Sachin Animations">
+    </section>
+    <script > 
+        let btn = document.getElementById('srch-btn');
+        let overlay = document.getElementById('overlay');
+        
+        btn.addEventListener('click',()=>{
+            var search = document.getElementById('animation').value;
+            overlay.style.display='grid';
+            overlay.classList.add('animate-overlay');
+            switch(search.toString()){
+                case "photoshop":{
+                    window.location.href="photoshop.html";
+                    break;
+                }
+                case "concept art":{
+                    window.location.href="conceptart.html";
+                    break;
+                }
+                case "vector art":{
+                    window.location.href="vectorart.html";
+                    break;
+                }
+                case "character art":{
+                    window.location.href="characterart.html";
+                    break;
+                }
+                default:{
+                    window.location.href="error.html";
+                    break;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
